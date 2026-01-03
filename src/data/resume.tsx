@@ -180,6 +180,59 @@ export const DATA = {
       video:
         "https://res.cloudinary.com/diu7vuhpk/video/upload/v1767468386/demo-iv_uydubr.mov",
     },
+
+    {
+      title: "TunerVN - Guitar Chords & Tools",
+      href: "https://res.cloudinary.com/diu7vuhpk/video/upload/v1767470222/ScreenRecording_01-04-2026_02-54-02_1_snvsb7.mp4", // Link store hoặc github
+      dates: "Nov 2025 - Present", // Thời gian dựa theo context của bạn
+      active: true,
+      description:
+        "A high-performance mobile application for musicians built with Expo. I bridged React Native with Native Modules to handle real-time audio processing for the Tuner and Metronome features, ensuring zero latency. The app features a 'Local-First' architecture using Turso (SQLite) for instant offline data access. I also engineered a complex video recording feature that overlays synchronized auto-scrolling lyrics/chords on the camera stream, optimizing thread performance to prevent UI jank.",
+      technologies: [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Turso (SQLite)",
+        "Native Modules",
+        "Figma",
+      ],
+      links: [
+        {
+          type: "Demo Video",
+          href: "https://res.cloudinary.com/diu7vuhpk/video/upload/v1767470222/ScreenRecording_01-04-2026_02-54-02_1_snvsb7.mp4",
+          icon: <Icons.youtube className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "https://res.cloudinary.com/diu7vuhpk/video/upload/v1767470222/ScreenRecording_01-04-2026_02-54-02_1_snvsb7.mp4", // Nên quay cảnh cái Tuner đang chạy kim hoặc cảnh vừa quay video vừa scroll
+    },
+    {
+      title: "Taskflow - Monorepo Productivity Platform",
+      href: "https://github.com/ductv-dev/stask-flow",
+      dates: "Dec 2025 - Present",
+      active: true,
+      description:
+        "A full-stack productivity application inspired by Todoist, engineered with a scalable Monorepo architecture using Turborepo. I established a seamless workflow with Shared Types between the Next.js frontend and Express/MongoDB backend, ensuring end-to-end type safety and reducing runtime errors. The UI is crafted with Shadcn UI for a clean, accessible, and responsive design, featuring complex state management for task organization, priority handling, and project nesting.",
+      technologies: [
+        "Turborepo",
+        "Next.js",
+        "TypeScript",
+        "Express.js",
+        "MongoDB",
+        "Shadcn UI",
+        "Google OAuth",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/ductv-dev/stask-flow",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/demo-taskflow.png",
+      video: "",
+    },
     // {
     //   title: 'llm.report',
     //   href: 'https://llm.report',
