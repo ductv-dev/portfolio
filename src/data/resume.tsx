@@ -145,6 +145,41 @@ export const DATA = {
       image: "/chord.png",
       video: "",
     },
+    {
+      title: "Interactive Wedding Invitation",
+      href: "hhttps://github.com/ductv-dev/nhagai-wedding",
+      dates: "Oct 2025 - Nov 2025",
+      active: true,
+      description:
+        "To replace traditional paper invitations, I developed a personalized digital wedding experience. The platform dynamically maps guest names from a JSON dataset using URL parameters, ensuring every visitor receives a unique greeting. Enhanced with smooth entrance animations via Framer Motion and an integrated background audio player, the website delivers an emotional and seamless user experience across all devices.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "JSON Data",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://nanhvduc.ductv.dev/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Website admin",
+          href: "https://nanhvduc.ductv.dev/admin",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/ductv-dev/nhagai-wedding",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "https://res.cloudinary.com/diu7vuhpk/video/upload/v1767468386/demo-iv_uydubr.mov",
+    },
     // {
     //   title: 'llm.report',
     //   href: 'https://llm.report',
