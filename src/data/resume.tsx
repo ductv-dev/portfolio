@@ -109,7 +109,7 @@ export const DATA = {
   projects: [
     {
       title: "Taskflow - Monorepo Productivity Platform",
-      href: "https://github.com/ductv-dev/stask-flow",
+      href: "https://github.com/ductv-dev/task-flow",
       dates: "Dec 2025 - Present",
       active: true,
       description:
