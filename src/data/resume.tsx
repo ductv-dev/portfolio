@@ -128,7 +128,7 @@ export const DATA = {
       links: [
         {
           type: "Source",
-          href: "https://github.com/ductv-dev/stask-flow",
+          href: "https://github.com/ductv-dev/task-flow",
           icon: <Icons.github className="size-3" />,
         },
       ],
