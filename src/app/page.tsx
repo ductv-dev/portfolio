@@ -1,4 +1,4 @@
-import { HackathonCard } from "@/components/hackathon-card";
+"use client";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
@@ -7,11 +7,13 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
+import { useState } from "react";
 import Markdown from "react-markdown";
 
-const BLUR_FADE_DELAY = 0.04;
+const BLUR_FADE_DELAY = 0.06;
 
 export default function Page() {
+  const [isFullscreen, setIsFullscreen] = useState(false);
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
@@ -30,12 +32,42 @@ export default function Page() {
                 text={DATA.description}
               />
             </div>
-            <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28  border">
-                <AvatarImage sizes="" alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
-            </BlurFade>
+            <div
+              onClick={() => setIsFullscreen(true)}
+              className="cursor-pointer hover:opacity-80 transition-opacity"
+            >
+              <BlurFade delay={BLUR_FADE_DELAY}>
+                <Avatar className="size-28 border">
+                  <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                  <AvatarFallback>{DATA.initials}</AvatarFallback>
+                </Avatar>
+              </BlurFade>
+            </div>
+            {isFullscreen && (
+              <div
+                // Lớp fixed bao phủ toàn màn hình, nền đen trong suốt
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+                // Nhấn vào bất kỳ đâu trên nền đen sẽ đóng ảnh
+                onClick={() => setIsFullscreen(false)}
+              >
+                {/* Nút đóng (tùy chọn) */}
+                <button
+                  className="absolute top-4 right-4 text-white text-3xl font-bold"
+                  onClick={() => setIsFullscreen(false)}
+                >
+                  &times;
+                </button>
+
+                {/* Ảnh full màn hình */}
+                <img
+                  src={DATA.avatarUrl}
+                  alt={DATA.name}
+                  className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl scale-in-center"
+                  // Ngăn việc nhấn vào ảnh cũng bị đóng (nếu bạn muốn người dùng chỉ nhấn ra ngoài mới đóng)
+                  onClick={(e) => e.stopPropagation()}
+                />
+              </div>
+            )}
           </div>
         </div>
       </section>

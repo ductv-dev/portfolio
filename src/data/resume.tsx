@@ -8,10 +8,10 @@ export const DATA = {
   location: "Da Nang, Viet Nam",
   locationLink: "https://www.google.com/maps/place/Da+Nang,+Viet+Nam",
   description:
-    "Intern/Fresher Web Developer. I love crafting pixel-perfect interfaces and architecting scalable full-stack applications.",
+    "Web and Mobile Developer. I love crafting pixel-perfect interfaces and architecting scalable full-stack applications.",
   summary:
     "Highly motivated Information Technology graduate with a strong foundation in modern JavaScript and TypeScript ecosystems. Experienced in building full-stack web and cross-platform mobile applications from scratch using [Next.js, NestJS, and React Native](/#skills). Equipped with strong logical thinking and a proactive learning attitude, I thrive on translating high-fidelity Figma designs into clean code and building robust database architectures with [PostgreSQL and Prisma](/#skills).",
-  avatarUrl: "/me.jpg",
+  avatarUrl: "/avt.jpg",
   skills: [
     "TypeScript",
     "JavaScript (ES6+)",
@@ -25,7 +25,7 @@ export const DATA = {
     "MySQL",
     "Prisma ORM",
     "Zustand",
-    "Jotai",
+
     "Tailwind CSS",
     "Shadcn UI",
     "React Hook Form",
@@ -103,7 +103,7 @@ export const DATA = {
       degree: "Bachelor of Information Technology (Software Engineering)",
       logoUrl: "/dtu.jpg",
       start: "2021",
-      end: "Jan 2026",
+      end: "2025",
     },
   ],
   projects: [
