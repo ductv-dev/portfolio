@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/me.jpg", // Đảm bảo file này tồn tại trong folder public
+        url: "/avt.jpg", // Đảm bảo file này tồn tại trong folder public
         width: 1200,
         height: 630,
         alt: DATA.name,
