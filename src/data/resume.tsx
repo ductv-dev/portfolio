@@ -25,7 +25,6 @@ export const DATA = {
     "MySQL",
     "Prisma ORM",
     "Zustand",
-
     "Tailwind CSS",
     "Shadcn UI",
     "React Hook Form",
