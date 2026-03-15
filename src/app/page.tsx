@@ -5,15 +5,41 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { IconCloud } from "@/components/ui/icon-cloud";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import { useState } from "react";
+
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.06;
+const slugs = [
+  "typescript",
+  "javascript",
+  "react",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "prisma",
+  "postgresql",
+  "vercel",
+  "docker",
+  "git",
+  "github",
+  "gitlab",
+  "visualstudiocode",
+  "sonarqube",
+  "figma",
+  "reactnative",
+];
 
 export default function Page() {
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
+  );
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
@@ -140,6 +166,9 @@ export default function Page() {
                 <Badge key={skill}>{skill}</Badge>
               </BlurFade>
             ))}
+          </div>
+          <div className="relative flex size-full items-center justify-center overflow-hidden">
+            <IconCloud images={images} />
           </div>
         </div>
       </section>

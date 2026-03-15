@@ -135,6 +135,32 @@ export const DATA = {
       video: "",
     },
     {
+      title: "Website Spa - Personal Portfolio Template",
+      href: "https://leospa-website.vercel.app/",
+      dates: "Mar 2026 - Present",
+      active: true,
+      description:
+        "Designed and developed a modern, responsive personal portfolio template using Next.js and Tailwind CSS. The website features a clean UI/UX design, optimized performance, and is fully customizable for developers to showcase their projects and skills effectively.",
+      technologies: [
+        "TypeScript",
+        "Next.js",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Magic UI",
+        "Vercel",
+        "Motion Frames",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://leospa-website.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/leospa.png",
+      video: "",
+    },
+    {
       title: "TunerVN - Cross-Platform Mobile App",
       href: "https://res.cloudinary.com/diu7vuhpk/video/upload/v1767470222/ScreenRecording_02-27-2026_17-18-44_1_ano2b3.mp4",
       dates: "Nov 2025 - Present",
