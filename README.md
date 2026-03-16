@@ -1,47 +1,119 @@
 <div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
+<img alt="DucTV Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
 </div>
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+# DucTV Portfolio
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+Personal developer portfolio website built with **Next.js**, **Shadcn/UI**, and **Magic UI**.
+
+🌐 Live Website: **https://ductv.dev**
+
+This portfolio showcases my projects, technical skills, and development experience.
+
+---
+
+# Tech Stack
+
+* Next.js 14
+* React
+* Typescript
+* TailwindCSS
+* Shadcn/UI
+* Framer Motion
+* Magic UI
+* Vercel (Deployment)
+
+---
 
 # Features
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+* Modern developer portfolio
+* Responsive design (desktop, tablet, mobile)
+* Blog system for sharing development knowledge
+* Smooth animations using Framer Motion
+* Easy configuration using a single config file
+* Optimized for performance and deployment on Vercel
+
+---
+
+# Project Structure
+
+```
+src
+ ├ components
+ ├ app
+ ├ data
+ │   └ resume.tsx
+ ├ lib
+```
+
+You can customize your personal information inside:
+
+```
+src/data/resume.tsx
+```
+
+---
 
 # Getting Started Locally
 
-1. Clone this repository to your local machine:
+### 1. Clone repository
 
-   ```bash
-   git clone https://github.com/dillionverma/portfolio
-   ```
+```bash
+git clone https://github.com/ductv-dev/portfolio.git
+```
 
-2. Move to the cloned directory
+### 2. Navigate to project folder
 
-   ```bash
-   cd portfolio
-   ```
+```bash
+cd portfolio
+```
 
-3. Install dependencies:
+### 3. Install dependencies
 
-   ```bash
-   pnpm install
-   ```
+```bash
+pnpm install
+```
 
-4. Start the local Server:
+### 4. Run development server
 
-   ```bash
-   pnpm dev
-   ```
+```bash
+pnpm dev
+```
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+### 5. Open in browser
+
+```
+http://localhost:3000
+```
+
+Then edit the configuration file:
+
+```
+src/data/resume.tsx
+```
+
+---
+
+# Deployment
+
+This project is deployed using **Vercel**.
+
+You can deploy your own version instantly:
+
+[Deploy with Vercel](https://vercel.com/new)
+
+---
+
+# Contact
+
+If you'd like to collaborate or connect:
+
+* Website: https://ductv.dev
+* GitHub: https://github.com/ductv-dev
+
+---
 
 # License
 
-Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
+This project is licensed under the MIT License.
