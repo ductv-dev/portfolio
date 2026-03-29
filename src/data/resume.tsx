@@ -256,5 +256,6 @@ export const DATA = {
       video: "",
     },
   ],
-  hackathons: [], // Đã xóa sạch dữ liệu mẫu của template để CV chuyên nghiệp hơn
+  hackathons: [],
+  infor: [],
 } as const;
