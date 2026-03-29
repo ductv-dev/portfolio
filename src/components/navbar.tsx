@@ -13,7 +13,7 @@ import { Dock, DockIcon } from "./magicui/dock";
 import { buttonVariants } from "./ui/button";
 import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 
-export default function Navbar() {
+export default function xNavbar() {
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-10 flex h-full max-h-16 origin-bottom">
       {/* Backdrop blur + gradient */}
@@ -29,7 +29,7 @@ export default function Navbar() {
                   href={item.href}
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
-                    "size-12"
+                    "size-12",
                   )}
                 >
                   <item.icon className="size-4" />
@@ -55,7 +55,7 @@ export default function Navbar() {
                     href={social.url}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12"
+                      "size-12",
                     )}
                   >
                     <social.icon className="size-4" />
