@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon, UserCheck } from "lucide-react";
+import { HomeIcon, Icon, icons, NotebookIcon, UserCheck } from "lucide-react";
 
 export const DATA = {
   name: "Trần Viết Đức",
@@ -257,5 +257,22 @@ export const DATA = {
     },
   ],
   hackathons: [],
-  infor: [],
+  infor: [
+    {
+      icon: <Icons.location className="size-4" strokeWidth={3} />,
+      title: "Đà Nẵng, Việt Nam",
+    },
+    {
+      icon: <Icons.universisy className="size-4" strokeWidth={3} />,
+      title: "Duy Tân University",
+    },
+    {
+      icon: <Icons.heart className="size-4" strokeWidth={3} />,
+      title: "Ngọc Anh",
+    },
+    {
+      icon: <Icons.home className="size-4" strokeWidth={3} />,
+      title: "Quảng Trị, Việt Nam",
+    },
+  ],
 } as const;
