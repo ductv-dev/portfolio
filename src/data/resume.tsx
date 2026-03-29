@@ -31,7 +31,6 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "/infor", icon: Icons.user, label: "Info" },
   ],
   contact: {
@@ -66,6 +65,18 @@ export const DATA = {
   },
 
   work: [
+    {
+      company: "The Black Ants ",
+      href: "https://theblackants.com/",
+      badges: [],
+      location: "Da Nang, Viet Nam ",
+      title: "Fullstack Developer ",
+      logoUrl: "/the-black-ants.png",
+      start: "April 2026",
+      end: "Present",
+      description:
+        "Internship at The Black Ants, working on building modern web and mobile applications.",
+    },
     {
       company: "Weebuild Viet Nam",
       href: "https://weebuild.io/",

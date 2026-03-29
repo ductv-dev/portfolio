@@ -8,13 +8,65 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { Icons } from "@/components/icons";
 
+const BLOG_POSTS = [
+  {
+    id: 1,
+    title: "Vừa ra trường đã... lấy vợ: Khi 'Senior' của cuộc đời hơn mình 6 tuổi",
+    date: "27 Tháng 12, 2025",
+    content: `Người ta thường nói, sau khi tốt nghiệp **Đại học Duy Tân**, việc quan trọng nhất là tìm một "Offer" xịn. Nhưng với mình, mình đã tìm thấy "Bản hợp đồng" quan trọng nhất đời mình từ trước khi cầm tấm bằng trên tay.
+    
+Hôm nay, gác lại những dòng code React hay Next.js, mình muốn chia sẻ về một hành trình khác: **Hành trình trở thành người đàn ông của gia đình.**
+
+**1. Khoảng cách 6 tuổi: Khi số tuổi chỉ là một "Variable"**  
+Vợ mình – Ngọc Anh – hơn mình 6 tuổi. Trong thế giới lập trình, 6 năm có thể là khoảng cách giữa một công nghệ cũ và một Framework hiện đại. Nhưng trong tình yêu, 6 năm ấy lại là sự bù trừ hoàn hảo.
+
+Cô ấy mang đến sự điềm tĩnh, thấu hiểu và kinh nghiệm của một người đã va chạm với đời. Còn mình mang đến sự nhiệt huyết, năng nổ và cả cái "liều" của một chàng trai vừa ra trường. Chúng mình không nhìn vào con số, chúng mình nhìn vào sự **đồng nhất về tần số (Frequency Compatibility).**`,
+    likes: "3.2K",
+    comments: "450",
+    shares: "128"
+  },
+  {
+    id: 2,
+    title: "Từ Đà Nẵng đến Hà Nội: Hành trình tìm kiếm 'Art' trong những dòng Code",
+    date: "23 Tháng 12, 2025",
+    content: `Chào mọi người, mình là **Viết Đức** (hay còn được biết đến với cái tên **DUCTV**).
+
+Nếu bạn đang đọc những dòng này, có lẽ chúng ta có chung một niềm đam mê: **Sự giao thoa giữa logic và thẩm mỹ.** Mình vừa khép lại 4 năm rực rỡ tại **Đại học Duy Tân (DTU)** với tấm bằng Kỹ thuật phần mềm trên tay. Nhưng thay vì chọn một bến đỗ quen thuộc tại quê hương Đà Nẵng, mình đã quyết định xách balo ra Hà Nội – bắt đầu hành trình "tầm sư học đạo" tại **Weebuild Viet Nam**.
+
+**Rời xa vùng an toàn**  
+Hà Nội đón mình bằng cái lạnh đặc trưng và nhịp sống hối hả, rất khác với sự bình yên của biển Mỹ Khê. Tại đây, mình may mắn được làm việc và học hỏi dưới sự dẫn dắt của những "người anh" Senior dày dặn kinh nghiệm.
+
+Hành trình này không chỉ là thay đổi địa lý, mà là bước ngoặt để mình nâng cấp tư duy từ một sinh viên sang một **Software Engineer** thực thụ.`,
+    likes: "1.8K",
+    comments: "215",
+    shares: "85"
+  },
+  {
+    id: 3,
+    title: "Tại sao lại là Đà Nẵng? Nơi 'Sóng Biển' Gặp Gỡ 'Dòng Code'",
+    date: "22 Tháng 12, 2025",
+    content: `Có người hỏi mình: _"Tại sao không chọn Sài Gòn sôi động hay ở lại hẳn Thủ đô để thăng tiến, mà lại luôn hướng về Đà Nẵng?"_
+
+Với mình, Đà Nẵng không chỉ là nơi mình sinh ra hay lớn lên, mà đó là thành phố của sự **cân bằng** – một yếu tố sống còn đối với một người làm nghề sáng tạo và kỹ thuật như lập trình viên.
+
+**1. Trạm sạc năng lượng cho tâm hồn**  
+Lập trình là một công việc tiêu tốn rất nhiều năng lượng não bộ. Những lúc đối mặt với một chiếc Bug "khó nhằn" hay một Logic phức tạp, việc được chạy xe dọc con đường biển Võ Nguyên Giáp, hít hà mùi muối mặn và nghe tiếng sóng vỗ là cách mình "reset" bản thân nhanh nhất.
+
+**2. Hệ sinh thái IT đang "chuyển mình" mạnh mẽ**  
+Nhiều người lầm tưởng Đà Nẵng chỉ mạnh về du lịch. Nhưng thực tế, những năm gần đây, thành phố quê hương mình đang dần trở thành một **"Silicon Valley" của miền Trung**. Từ những ngày còn ngồi trên ghế nhà trường tại Đại học Duy Tân, mình đã thấy sự gắn kết trong cộng đồng anh em Developer miền Trung thật sự rất tuyệt vời.`,
+    likes: "2.5K",
+    comments: "530",
+    shares: "150"
+  }
+];
+
 export default function InfoPage() {
   return (
     <div className="min-h-screen bg-[#F0F2F5] dark:bg-zinc-950 pb-20 pt-0 md:pt-6">
-      
+
       {/* Container chính gom tất cả */}
       <div className="max-w-[1024px] mx-auto space-y-4 md:space-y-6">
-        
+
         {/* Header Content */}
         <div className="bg-card shadow-sm dark:shadow-none dark:border border-border/50 md:rounded-xl overflow-hidden">
           {/* Cover Image */}
@@ -33,7 +85,7 @@ export default function InfoPage() {
           {/* Avatar & Info Container */}
           <div className="px-4 md:px-8 relative pb-6 md:pb-8">
             <div className="flex flex-col md:flex-row items-center md:items-end gap-4 -mt-16 md:-mt-20 relative z-10">
-              
+
               {/* Avatar */}
               <div className="relative size-[120px] md:size-[160px] rounded-full border-4 border-card overflow-hidden bg-muted shadow-md hover:scale-105 transition-transform duration-300 shrink-0">
                 <Image
@@ -43,10 +95,10 @@ export default function InfoPage() {
                   className="object-cover"
                 />
               </div>
-              
-              {/* Name and Job & Socials (flex-1 to push everything in row) */}
+
+              {/* Name and Job & Socials */}
               <div className="flex-1 flex flex-col md:flex-row justify-between items-center md:items-end w-full gap-4 text-center md:text-left mt-2 md:mt-0">
-                
+
                 {/* Title */}
                 <div>
                   <h1 className="text-[28px] md:text-[32px] leading-tight font-bold text-foreground">
@@ -56,7 +108,7 @@ export default function InfoPage() {
                     Fullstack Developer
                   </p>
                 </div>
-                
+
                 {/* Social Links */}
                 <div className="flex flex-wrap items-center justify-center gap-2">
                   {Object.entries(DATA.contact.social).map(([name, social]) => (
@@ -81,21 +133,13 @@ export default function InfoPage() {
 
         {/* CSS Grid for Mobile (1 col) and Desktop (2 cols) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 px-4 md:px-0">
-          
+
           {/* Left Column: Intro Card */}
           <div className="lg:col-span-4 shrink-0">
             <div className="sticky top-20 space-y-4 md:space-y-6">
               <Card className="shadow-sm border-none bg-card rounded-xl">
-                <CardHeader className="p-4 md:p-5 pb-2">
-                  <CardTitle className="text-lg font-bold">Giới thiệu</CardTitle>
-                </CardHeader>
-                <CardContent className="p-4 md:p-5 pt-0 space-y-4">
-                  
-                  {/* Bio */}
-                  <p className="text-center lg:text-left text-foreground/90 text-[15px] italic mb-4">
-                    "{DATA.description}"
-                  </p>
 
+                <CardContent className="p-4 md:p-5 pt-0 space-y-4">
                   {/* Info details array */}
                   <div className="space-y-4 pt-4 border-t border-border/50">
                     {DATA.work && DATA.work[0] && (
@@ -120,7 +164,7 @@ export default function InfoPage() {
 
                   {/* Direct Message / Contact button below info */}
                   <Link href={`mailto:${DATA.contact.email}`} className="flex items-center justify-center w-full gap-2 px-4 py-2 mt-4 text-[15px] font-semibold transition-all rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground">
-                     <Icons.email className="size-[18px]" /> Liên hệ qua Email
+                    <Icons.email className="size-[18px]" /> Liên hệ qua Email
                   </Link>
 
                 </CardContent>
@@ -128,106 +172,42 @@ export default function InfoPage() {
             </div>
           </div>
 
-          {/* Right Column: Main Content Details (Summary, Skills, Exp, Edu) */}
+          {/* Right Column: Newsfeed & Main Content Details */}
           <div className="lg:col-span-8 space-y-4 md:space-y-6">
-            
-            {/* About Me Section */}
-            <Card className="shadow-sm border-none bg-card rounded-xl animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <CardHeader className="p-4 md:p-6 pb-2 border-b border-border/30">
-                <CardTitle className="text-xl font-bold">Về tôi</CardTitle>
-              </CardHeader>
-              <CardContent className="p-4 md:p-6 text-[15px] text-muted-foreground leading-relaxed">
-                <div className="prose prose-neutral dark:prose-invert max-w-none">
-                  <ReactMarkdown>{DATA.summary}</ReactMarkdown>
-                </div>
-              </CardContent>
-            </Card>
 
-            {/* Skills Section */}
-            <Card className="shadow-sm border-none bg-card rounded-xl animate-in fade-in slide-in-from-bottom-4 duration-500 delay-150">
-              <CardHeader className="p-4 md:p-6 pb-2 border-b border-border/30">
-                <CardTitle className="text-xl font-bold">Kỹ năng chuyên môn</CardTitle>
-              </CardHeader>
-              <CardContent className="p-4 md:p-6">
-                <div className="flex flex-wrap gap-2 md:gap-2.5">
-                  {DATA.skills.map((skill, index) => (
-                    <Badge 
-                      key={index} 
-                      variant="secondary" 
-                      className="px-3 md:px-4 py-1.5 text-[13px] md:text-sm hover:scale-105 hover:bg-primary hover:text-primary-foreground transition-all cursor-default bg-muted/50"
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            {/* --- NEWSFEED (BÀI VIẾT) --- */}
 
-            {/* Work Experience Section */}
-            {DATA.work && DATA.work.length > 0 && (
-              <Card className="shadow-sm border-none bg-card rounded-xl animate-in fade-in slide-in-from-bottom-4 duration-500 delay-300">
-                <CardHeader className="p-4 md:p-6 pb-2 border-b border-border/30">
-                  <CardTitle className="text-xl font-bold">Kinh nghiệm làm việc</CardTitle>
+
+
+            {/* Render Blog Posts */}
+            {BLOG_POSTS.map((post) => (
+              <Card key={post.id} className="shadow-sm border-none bg-card rounded-xl animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <CardHeader className="p-4 md:p-5 flex flex-row items-center gap-3 space-y-0 pb-2">
+                  <div className="size-10 rounded-full relative overflow-hidden bg-muted shrink-0 border border-border cursor-pointer hover:brightness-95">
+                    <Image src={DATA.avatarUrl} alt="Avatar" fill className="object-cover" />
+                  </div>
+                  <div className="flex flex-col">
+                    <h3 className="font-semibold text-[15px] hover:underline cursor-pointer text-foreground">{DATA.name}</h3>
+                    <div className="flex items-center gap-1 text-[13px] text-muted-foreground">
+                      <span className="hover:underline cursor-pointer">{post.date}</span>
+                      <span>·</span>
+                      <Icons.globe className="size-3" />
+                    </div>
+                  </div>
                 </CardHeader>
-                <CardContent className="p-4 md:p-6">
-                  <div className="space-y-6">
-                    {DATA.work.map((work, index) => (
-                      <div key={index} className="relative pl-6 md:pl-8 border-l-2 border-muted before:absolute before:left-[-9px] before:top-2 before:size-4 before:rounded-full before:bg-primary before:border-4 before:border-background">
-                        <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-1 sm:gap-4 mb-2">
-                          <h3 className="font-bold text-[16px] text-foreground">{work.title}</h3>
-                          <Badge variant="outline" className="w-fit text-xs bg-muted/30">
-                            {work.start} - {work.end}
-                          </Badge>
-                        </div>
-                        {work.company && (
-                          <Link href={work.href || "#"} target="_blank" className="inline-block font-semibold text-primary mb-2 hover:underline text-[14px]">
-                            {work.company}
-                          </Link>
-                        )}
-                        <p className="text-muted-foreground text-[14px] md:text-[15px] leading-relaxed text-justify">
-                          {work.description}
-                        </p>
-                      </div>
-                    ))}
+
+                <CardContent className="p-4 md:p-5 pt-0">
+                  <h4 className="font-bold text-[16px] md:text-[18px] mb-2">{post.title}</h4>
+                  <div className="prose prose-neutral dark:prose-invert max-w-none text-[15px] leading-relaxed text-foreground/90">
+                    <ReactMarkdown>{post.content}</ReactMarkdown>
                   </div>
                 </CardContent>
-              </Card>
-            )}
 
-            {/* Education Section */}
-            {DATA.education && DATA.education.length > 0 && (
-              <Card className="shadow-sm border-none bg-card rounded-xl animate-in fade-in slide-in-from-bottom-4 duration-500 delay-500">
-                <CardHeader className="p-4 md:p-6 pb-2 border-b border-border/30">
-                  <CardTitle className="text-xl font-bold">Học vấn</CardTitle>
-                </CardHeader>
-                <CardContent className="p-4 md:p-6">
-                  <div className="grid gap-4">
-                    {DATA.education.map((edu, index) => (
-                      <div key={index} className="flex flex-col sm:flex-row gap-4 p-4 rounded-lg border border-border/50 bg-muted/20 hover:bg-muted/40 transition-colors">
-                        {edu.logoUrl ? (
-                          <div className="relative size-14 shrink-0 rounded-md overflow-hidden bg-white p-1 shadow-sm">
-                            <Image src={edu.logoUrl} alt={edu.school} fill className="object-contain p-1" />
-                          </div>
-                        ) : (
-                          <div className="relative size-14 shrink-0 rounded-md bg-muted flex items-center justify-center">
-                            <Icons.universisy className="size-6 text-muted-foreground" />
-                          </div>
-                        )}
-                        <div className="flex-1">
-                          <h3 className="font-bold text-[16px] text-foreground">{edu.school}</h3>
-                          <p className="text-[14px] text-muted-foreground mt-0.5">{edu.degree}</p>
-                        </div>
-                        <div className="sm:text-right mt-2 sm:mt-0">
-                          <Badge variant="secondary" className="text-primary font-medium bg-primary/10 border-primary/20">
-                            {edu.start} - {edu.end}
-                          </Badge>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
+
               </Card>
-            )}
+            ))}
+
+
 
           </div>
         </div>
