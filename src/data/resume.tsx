@@ -259,19 +259,19 @@ export const DATA = {
   hackathons: [],
   infor: [
     {
-      icon: <Icons.location className="size-4" strokeWidth={3} />,
+      icon: <Icons.location className="size-4" />,
       title: "Đà Nẵng, Việt Nam",
     },
     {
-      icon: <Icons.universisy className="size-4" strokeWidth={3} />,
+      icon: <Icons.universisy className="size-4" />,
       title: "Duy Tân University",
     },
     {
-      icon: <Icons.heart className="size-4" strokeWidth={3} />,
+      icon: <Icons.heart className="size-4" />,
       title: "Ngọc Anh",
     },
     {
-      icon: <Icons.home className="size-4" strokeWidth={3} />,
+      icon: <Icons.home className="size-4" />,
       title: "Quảng Trị, Việt Nam",
     },
   ],
