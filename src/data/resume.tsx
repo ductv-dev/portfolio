@@ -95,8 +95,7 @@ export const DATA = {
       badges: [],
       location: "Da Nang, Viet Nam",
       title: "Store Manager & Barista",
-      logoUrl:
-        "https://www.facebook.com/photo/?fbid=853691077268635&set=a.160689179902165&locale=vi_VN", // Bạn có thể thêm icon tách cà phê nếu có
+      logoUrl: "/tmore.png", // Thêm ảnh logo vào thư mục public nếu có
       start: "2023",
       end: "2025",
       description:

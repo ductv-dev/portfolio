@@ -8,6 +8,7 @@ import { Inter as FontSans } from "next/font/google";
 import Script from "next/script";
 
 import "./globals.css";
+import { LinkifyProvider } from "@/provider/linkify";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -111,10 +112,12 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
-          <TooltipProvider delayDuration={0}>
-            {children}
-            <Navbar />
-          </TooltipProvider>
+          <LinkifyProvider>
+            <TooltipProvider delayDuration={0}>
+              {children}
+              <Navbar />
+            </TooltipProvider>
+          </LinkifyProvider>
         </ThemeProvider>
       </body>
     </html>

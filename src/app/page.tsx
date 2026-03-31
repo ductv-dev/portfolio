@@ -6,6 +6,7 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { IconCloud } from "@/components/ui/icon-cloud";
+import { ImagesScrollingAnimation } from "@/components/ui/images-scrolling-animation";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import { useState } from "react";
@@ -213,6 +214,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+
 
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
