@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, Icon, icons, NotebookIcon, UserCheck } from "lucide-react";
+import { HomeIcon } from "lucide-react";
 
 export const DATA = {
   name: "Trần Viết Đức",
@@ -11,7 +11,7 @@ export const DATA = {
     "Web and Mobile Developer. I love crafting pixel-perfect interfaces and architecting scalable full-stack applications.",
   summary:
     "Highly motivated Information Technology graduate with a strong foundation in modern JavaScript and TypeScript ecosystems. Experienced in building full-stack web and cross-platform mobile applications from scratch using [Next.js, NestJS, and React Native](/#skills). Equipped with strong logical thinking and a proactive learning attitude, I thrive on translating high-fidelity Figma designs into clean code and building robust database architectures with [PostgreSQL and Prisma](/#skills).",
-  avatarUrl: "/avt.jpg",
+  avatarUrl: "/avatar-new.JPG",
   skills: [
     "TypeScript",
     "JavaScript (ES6+)",

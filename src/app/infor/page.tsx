@@ -3,13 +3,10 @@
 import { DATA } from "@/data/resume";
 import Image from "next/image";
 import Link from "next/link";
-import { Icons } from "@/components/icons";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState } from "react";
-import InforSection from "./sections/infor";
-import ImageSection from "./sections/image";
 import BlogSection from "./sections/blog";
+import ImageSection from "./sections/image";
+import InforSection from "./sections/infor";
 
 type Tab = "thong-tin" | "anh" | "blog";
 
@@ -24,16 +21,14 @@ export default function InfoPage() {
 
   return (
     <div className="min-h-screen pb-20 pt-0 md:pt-6">
-
       {/* Container chính gom tất cả */}
       <div className="max-w-[1024px] mx-auto space-y-4 md:space-y-6">
-
         {/* Header Content */}
         <div className="bg-card shadow-sm dark:shadow-none dark:border border-border/50 md:rounded-xl overflow-hidden">
           {/* Cover Image */}
           <div className="relative w-full h-[180px] md:h-[280px] lg:h-[320px] bg-muted">
             <Image
-              src="/ninhbinh.jpg"
+              src="/banner.JPG"
               alt="Cover"
               fill
               priority
@@ -46,7 +41,6 @@ export default function InfoPage() {
           {/* Avatar & Info Container */}
           <div className="px-4 md:px-8 relative pb-0 md:pb-2">
             <div className="flex flex-col md:flex-row items-center md:items-end gap-4 -mt-16 md:-mt-20 relative z-10">
-
               {/* Avatar */}
               <div className="relative size-[120px] md:size-[160px] rounded-full border-4 border-card overflow-hidden bg-muted shadow-md hover:scale-105 transition-transform duration-300 shrink-0">
                 <Image
@@ -59,11 +53,9 @@ export default function InfoPage() {
 
               {/* Name and Job & Socials */}
               <div className="flex-1 flex flex-col md:flex-row justify-between items-center md:items-end w-full gap-4 text-center md:text-left mt-2 md:mt-0 pb-4 md:pb-4">
-
                 {/* Title */}
 
                 <div className="">
-
                   <h1 className="text-[28px] md:text-[32px] leading-tight font-bold text-foreground">
                     {DATA.name}
                   </h1>
@@ -88,7 +80,6 @@ export default function InfoPage() {
                     </Link>
                   ))}
                 </div>
-
               </div>
             </div>
 
@@ -100,9 +91,10 @@ export default function InfoPage() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`
                     relative px-4 py-3 text-[15px] font-semibold transition-colors rounded-none
-                    ${activeTab === tab.id
-                      ? "text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[3px] after:rounded-full after:bg-primary"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                    ${
+                      activeTab === tab.id
+                        ? "text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[3px] after:rounded-full after:bg-primary"
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                     }
                   `}
                 >
@@ -116,10 +108,7 @@ export default function InfoPage() {
         {/* ── Tab Content ── */}
 
         {/* Thông tin tab: 2-col layout (left sidebar + right main) */}
-        {activeTab === "thong-tin" && (
-
-          <InforSection />
-        )}
+        {activeTab === "thong-tin" && <InforSection />}
 
         {/* Ảnh tab: full width */}
         {activeTab === "anh" && (
@@ -134,7 +123,6 @@ export default function InfoPage() {
             <BlogSection />
           </div>
         )}
-
       </div>
     </div>
   );

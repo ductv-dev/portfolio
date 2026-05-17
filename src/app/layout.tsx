@@ -5,10 +5,9 @@ import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
-import Script from "next/script";
 
-import "./globals.css";
 import { LinkifyProvider } from "@/provider/linkify";
+import "./globals.css";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -40,7 +39,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/avt.jpg", // Đảm bảo file này tồn tại trong folder public
+        url: "/avatar-new.JPG", // Đảm bảo file này tồn tại trong folder public
         width: 1200,
         height: 630,
         alt: DATA.name,
