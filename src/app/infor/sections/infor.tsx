@@ -34,7 +34,32 @@ export default function InforSection() {
               <div className="text-muted-foreground shrink-0 [&>svg]:size-5">
                 {item.icon}
               </div>
-              <span className="text-[15px]">{item.title}</span>
+              {item.href ? (
+                <Link
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[15px] hover:text-primary transition-colors"
+                >
+                  <span className="font-medium">{item.title}</span>
+                  {item.value ? (
+                    <span className="text-muted-foreground">
+                      {" "}
+                      ({item.value})
+                    </span>
+                  ) : null}
+                </Link>
+              ) : (
+                <span className="text-[15px]">
+                  {item.title}
+                  {item.value ? (
+                    <span className="text-muted-foreground">
+                      {" "}
+                      ({item.value})
+                    </span>
+                  ) : null}
+                </span>
+              )}
             </div>
           ))}
         </div>

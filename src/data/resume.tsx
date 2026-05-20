@@ -1,5 +1,13 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon } from "lucide-react";
+import type { ReactNode } from "react";
+
+type InfoItem = {
+  icon: ReactNode;
+  title: string;
+  value?: string;
+  href?: string;
+};
 
 export const DATA = {
   name: "Trần Viết Đức",
@@ -273,6 +281,12 @@ export const DATA = {
       title: "Đà Nẵng, Việt Nam",
     },
     {
+      icon: <Icons.tiktok className="size-4" />,
+      title: "Kênh TikTok Đà Nẵng . Zip",
+      value: "@danangzip.site",
+      href: "https://www.tiktok.com/@danangzip.site",
+    },
+    {
       icon: <Icons.universisy className="size-4" />,
       title: "Duy Tân University",
     },
@@ -284,5 +298,5 @@ export const DATA = {
       icon: <Icons.home className="size-4" />,
       title: "Quảng Trị, Việt Nam",
     },
-  ],
+  ] satisfies InfoItem[],
 } as const;
