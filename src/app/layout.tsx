@@ -1,10 +1,10 @@
 import Navbar from "@/components/navbar";
+import { SmoothScrollProvider } from "@/components/smooth-scroll-provider";
 import { ThemeProvider } from "@/components/theme-provider";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Space_Grotesk as FontSans } from "next/font/google";
 
 import { LinkifyProvider } from "@/provider/linkify";
 import "./globals.css";
@@ -16,6 +16,21 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
+  applicationName: "ductv.dev",
+  authors: [{ name: DATA.name, url: DATA.url }],
+  creator: DATA.name,
+  publisher: DATA.name,
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
+    icon: [
+      {
+        url: "/icon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+  },
   title: {
     default: `${DATA.name} | Software Engineer & Frontend Developer`,
     template: `%s | ${DATA.name}`,
@@ -31,9 +46,9 @@ export const metadata: Metadata = {
     "Software Engineer Portfolio",
   ],
   openGraph: {
-    title: `${DATA.name} | Portfolio`,
-    description: DATA.description,
-    url: DATA.url,
+    title: `${DATA.name} | Software Engineer & Frontend Developer`,
+    description: `Portfolio của ${DATA.name} - Frontend Developer chuyên về React, React Native và Next.js tại Đà Nẵng.`,
+    url: "/",
     siteName: DATA.name,
     locale: "vi_VN",
     type: "website",
@@ -58,8 +73,10 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: DATA.name,
     card: "summary_large_image",
+    title: `${DATA.name} | Software Engineer & Frontend Developer`,
+    description: DATA.description,
+    images: ["/avatar-new.JPG"],
   },
   verification: {
     google: "r28wTyKNPxZoMi0Fdqh7JCV6neoucMobgInEyhlASMo",
@@ -106,16 +123,16 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-3xl mx-auto py-12 sm:py-24 px-6",
+          "min-h-screen overflow-x-hidden bg-background font-sans antialiased",
           fontSans.variable,
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <LinkifyProvider>
-            <TooltipProvider delayDuration={0}>
+            <SmoothScrollProvider>
               {children}
               <Navbar />
-            </TooltipProvider>
+            </SmoothScrollProvider>
           </LinkifyProvider>
         </ThemeProvider>
       </body>

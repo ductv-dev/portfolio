@@ -62,6 +62,10 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      backgroundImage: {
+        grain:
+          "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.55'/%3E%3C/svg%3E\")",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -71,10 +75,23 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        grain: {
+          "0%, 100%": { transform: "translate3d(0, 0, 0)" },
+          "10%": { transform: "translate3d(-5%, -8%, 0)" },
+          "20%": { transform: "translate3d(-12%, 5%, 0)" },
+          "30%": { transform: "translate3d(7%, -10%, 0)" },
+          "40%": { transform: "translate3d(-5%, 15%, 0)" },
+          "50%": { transform: "translate3d(-12%, 8%, 0)" },
+          "60%": { transform: "translate3d(12%, 0, 0)" },
+          "70%": { transform: "translate3d(0, 12%, 0)" },
+          "80%": { transform: "translate3d(6%, 4%, 0)" },
+          "90%": { transform: "translate3d(-8%, 10%, 0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        grain: "grain 18s steps(10) infinite",
       },
     },
   },
