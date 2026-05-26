@@ -13,7 +13,7 @@ export const DATA = {
   name: "Trần Viết Đức",
   initials: "DUCTV",
   url: "https://ductv.dev",
-  location: "Da Nang, Viet Nam",
+  location: "168 Nguyen Van Linh, Da Nang, Viet Nam",
   locationLink: "https://www.google.com/maps/place/Da+Nang,+Viet+Nam",
   description:
     "Fullstack Developer. I love architecting scalable distributed systems and crafting high-performance, pixel-perfect web applications.",
@@ -137,11 +137,11 @@ export const DATA = {
       links: [
         {
           type: "Source",
-          href: "https://github.com/ductv-dev",
+          href: "https://github.com/ductv-dev/uni_crypto-monorepo",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/uni-crypto.png",
       video: "",
     },
     {
