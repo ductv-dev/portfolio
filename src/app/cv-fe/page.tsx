@@ -9,23 +9,24 @@ function stripMd(text: string) {
 }
 
 const skillGroups: Record<string, string[]> = {
-  Frontend: ["TypeScript", "JavaScript (ES6+)", "React.js", "Next.js", "React Native", "TanStack Query", "Tailwind CSS", "Shadcn UI"],
-  Backend: ["NestJS", "Node.js", "Microservices", "System Design"],
-  "Database & Infra": ["PostgreSQL", "MySQL", "Prisma ORM", "Redis", "RabbitMQ", "Socket.IO", "Docker"],
-  Tools: ["Git", "React Hook Form"],
+  "Core Frontend": ["TypeScript", "JavaScript (ES6+)", "React.js", "Next.js", "React Native"],
+  "Styling & UI": ["Tailwind CSS", "Shadcn UI", "Framer Motion", "React Hook Form"],
+  "State & Data": ["TanStack Query", "Zustand", "Jotai"],
+  "Tools & Infra": ["Git", "Docker", "Node.js", "Figma"],
 };
 
 const featuredProjects = [
-  "Uni Crypto - Token Trading Exchange",
   "Taskflow - Monorepo Productivity Platform",
-  "Homestay Booking Management System",
+  "Website Spa - Personal Portfolio Template",
   "TunerVN - Cross-Platform Mobile App",
+  "Interactive Wedding Invitation",
 ];
 
-export default function CVPage() {
-  const projects = DATA.projects.filter((p) =>
-    featuredProjects.includes(p.title),
-  );
+const feSummary =
+  "Information Technology graduate with solid hands-on experience in frontend and mobile development. Specialized in building modern, pixel-perfect web applications with Next.js and cross-platform mobile apps with React Native. Experienced in translating high-fidelity Figma designs into clean, maintainable interfaces, managing complex UI states with TanStack Query and Zustand, and crafting smooth animations with Framer Motion. Holds a TOEIC score of 490. Brings a strong eye for design, component architecture expertise, and a proactive approach to delivering polished user experiences.";
+
+export default function CVFEPage() {
+  const projects = DATA.projects.filter((p) => featuredProjects.includes(p.title));
 
   return (
     <>
@@ -38,7 +39,7 @@ export default function CVPage() {
         }
       `}</style>
 
-      {/* Floating print button */}
+      {/* Floating buttons */}
       <div className="no-print fixed right-6 top-6 z-50 flex gap-2">
         <a
           href="/"
@@ -47,10 +48,10 @@ export default function CVPage() {
           ← Back
         </a>
         <a
-          href="/cv-fe"
+          href="/cv"
           className="rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-medium text-blue-600 shadow-lg transition hover:bg-blue-50"
         >
-          ⇄ Frontend CV
+          ⇄ Fullstack CV
         </a>
         <button
           onClick={() => window.print()}
@@ -71,10 +72,10 @@ export default function CVPage() {
                   {DATA.name}
                 </h1>
                 <p className="mt-2 text-[15px] font-medium text-neutral-400">
-                  Fullstack Developer
+                  Frontend Developer
                 </p>
                 <p className="mt-3 max-w-[420px] text-[12px] leading-[1.6] text-neutral-500">
-                  {DATA.description}
+                  Passionate about crafting pixel-perfect, high-performance web and mobile experiences with React, Next.js & React Native.
                 </p>
               </div>
               <div className="shrink-0 space-y-1.5 text-right text-[12px] text-neutral-400">
@@ -114,7 +115,7 @@ export default function CVPage() {
                   About
                 </h2>
                 <p className="text-[12.5px] leading-[1.8] text-neutral-600">
-                  {stripMd(DATA.summary)}
+                  {feSummary}
                 </p>
               </section>
 
@@ -126,7 +127,8 @@ export default function CVPage() {
                   Experience
                 </h2>
                 <div className="space-y-5">
-                  {DATA.work.map((job) => (
+                  {/* Weebuild first — most FE-relevant */}
+                  {[...DATA.work].reverse().map((job) => (
                     <div key={job.company}>
                       <div className="flex items-baseline justify-between">
                         <h3 className="text-[13.5px] font-bold text-neutral-900">
