@@ -16,25 +16,29 @@ export const DATA = {
   location: "Da Nang, Viet Nam",
   locationLink: "https://www.google.com/maps/place/Da+Nang,+Viet+Nam",
   description:
-    "Web and Mobile Developer. I love crafting pixel-perfect interfaces and architecting scalable full-stack applications.",
+    "Fullstack Developer. I love architecting scalable distributed systems and crafting high-performance, pixel-perfect web applications.",
   summary:
-    "Highly motivated Information Technology graduate with a strong foundation in modern JavaScript and TypeScript ecosystems. Experienced in building full-stack web and cross-platform mobile applications from scratch using [Next.js, NestJS, and React Native](/#skills). Equipped with strong logical thinking and a proactive learning attitude, I thrive on translating high-fidelity Figma designs into clean code and building robust database architectures with [PostgreSQL and Prisma](/#skills).",
+    "Information Technology graduate with solid hands-on experience across the full development stack. Skilled in building modern web applications with [Next.js and NestJS](/#skills) and cross-platform mobile apps with React Native. Completed a fullstack internship where I applied microservice architecture, containerized services with [Docker](/#skills), leveraged [Redis](/#skills) for caching and [RabbitMQ](/#skills) for asynchronous event-driven communication, and designed scalable relational database schemas. I bring a proactive mindset, strong system-analysis thinking, and a keen eye for translating Figma designs into clean, maintainable code.",
   avatarUrl: "/avatar-new.JPG",
   skills: [
     "TypeScript",
     "JavaScript (ES6+)",
     "React.js",
-    "Next.js ",
+    "Next.js",
     "React Native",
     "NestJS",
     "Node.js",
+    "Microservices",
     "PostgreSQL",
     "MySQL",
     "Prisma ORM",
+    "Redis",
+    "RabbitMQ",
+    "Docker",
+    "System Design",
     "Tailwind CSS",
     "Shadcn UI",
     "React Hook Form",
-    "Docker",
     "Git",
   ],
   navbar: [
@@ -81,9 +85,9 @@ export const DATA = {
       title: "Fullstack Developer ",
       logoUrl: "/the-black-ants.png",
       start: "April 2026",
-      end: "Present",
+      end: "May 2026",
       description:
-        "Internship at The Black Ants, working on building modern web and mobile applications.",
+        "Completed a fullstack internship building production-grade applications with a microservice architecture. Gained hands-on experience containerizing and orchestrating services with Docker, using Redis for high-performance caching and session management, and RabbitMQ for asynchronous inter-service communication. Applied system analysis and database design principles to architect scalable, maintainable backend systems in a real-world team environment.",
     },
     {
       company: "Weebuild Viet Nam",
@@ -121,6 +125,35 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "Uni Crypto - Token Trading Exchange",
+      href: "https://github.com/ductv-dev",
+      dates: "Apr 2026 - May 2026",
+      active: true,
+      description:
+        "Architected and developed a full-stack cryptocurrency token trading platform, replicating core features of a modern crypto exchange. Designed a microservice backend with NestJS where each domain (order management, user wallet, market data) runs as an independent service communicating via RabbitMQ message queues. Integrated Redis to power a high-throughput in-memory order book and real-time price ticker. Delivered live candlestick charts and order book updates to the Next.js frontend via WebSockets. All services are containerized with Docker Compose for consistent deployment across environments.",
+      technologies: [
+        "NestJS",
+        "Microservices",
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Redis",
+        "RabbitMQ",
+        "WebSocket",
+        "Docker",
+        "Prisma",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/ductv-dev",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
     {
       title: "Taskflow - Monorepo Productivity Platform",
       href: "https://github.com/ductv-dev/task-flow",
@@ -248,30 +281,6 @@ export const DATA = {
       image: "",
       video:
         "https://res.cloudinary.com/diu7vuhpk/video/upload/v1767468386/demo-iv_uydubr.mov",
-    },
-    {
-      title: "Chord Components Library",
-      href: "https://chord.ductv.dev/",
-      dates: "Aug 2025 - Sep 2025",
-      active: true,
-      description:
-        "Designed and developed a collection of reusable, animated UI components for developers, focusing on modern web aesthetics and accessibility.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Shadcn UI",
-        "Magic UI",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://chord.ductv.dev/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "/chord.png",
-      video: "",
     },
   ],
   hackathons: [],

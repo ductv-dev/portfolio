@@ -75,6 +75,10 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
         grain: {
           "0%, 100%": { transform: "translate3d(0, 0, 0)" },
           "10%": { transform: "translate3d(-5%, -8%, 0)" },
@@ -92,6 +96,7 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         grain: "grain 18s steps(10) infinite",
+        marquee: "marquee 30s linear infinite",
       },
     },
   },

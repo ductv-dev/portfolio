@@ -12,8 +12,23 @@ const spring = {
 } as const;
 
 const desktopHeadline =
-  "Frontend craft with cinematic motion and product clarity.";
-const mobileLines = ["Code that", "feels", "cinematic."];
+  "Fullstack craft with scalable systems and product clarity.";
+const mobileLines = ["Build fast.", "Ship clean.", "Full-stack."];
+
+const ticker = [
+  "Next.js",
+  "NestJS",
+  "TypeScript",
+  "Docker",
+  "Redis",
+  "RabbitMQ",
+  "PostgreSQL",
+  "React Native",
+  "Microservices",
+  "Prisma",
+  "Tailwind CSS",
+  "Node.js",
+];
 
 const container = {
   hidden: {},
@@ -68,7 +83,7 @@ export function CinematicHero({
     <section
       ref={targetRef}
       id="hero"
-      className="relative isolate -mx-4 min-h-[100svh] overflow-hidden rounded-b-[2rem] px-5 pb-8 pt-5 sm:-mx-10 sm:min-h-[88vh] sm:rounded-b-[3rem] sm:px-10 sm:py-10 lg:-mx-16 lg:px-16"
+      className="relative isolate -mx-4 min-h-[100svh] overflow-hidden rounded-b-[2rem] px-5 pb-14 pt-5 sm:-mx-10 sm:min-h-[88vh] sm:rounded-b-[3rem] sm:px-10 sm:pb-16 sm:pt-10 lg:-mx-16 lg:px-16"
     >
       <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_20%_15%,rgba(251,191,36,0.28),transparent_30%),radial-gradient(circle_at_78%_18%,rgba(14,165,233,0.22),transparent_28%),linear-gradient(135deg,hsl(var(--background)),hsl(var(--secondary)))]" />
       <div className="absolute inset-0 -z-10 animate-grain bg-grain opacity-[0.16] mix-blend-soft-light dark:opacity-[0.22]" />
@@ -82,7 +97,7 @@ export function CinematicHero({
             transition={spring}
             className="inline-flex rounded-full border border-foreground/10 bg-background/60 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground shadow-2xl shadow-foreground/5 backdrop-blur-xl"
           >
-            ductv.dev / frontend
+            ductv.dev / fullstack
           </motion.div>
 
           <motion.h1
@@ -148,16 +163,16 @@ export function CinematicHero({
           </Avatar>
           <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/20 bg-black/40 px-4 py-3 text-left text-white shadow-2xl backdrop-blur-md">
             <p className="text-[10px] uppercase tracking-[0.2em] text-white/60">
-              Building polished UI
+              Fullstack Developer
             </p>
-            <p className="mt-1 text-base font-semibold">Frontend Developer</p>
+            <p className="mt-1 text-base font-semibold">Open to opportunities</p>
           </div>
         </motion.button>
       </div>
 
       <motion.div
         style={{ y: heroY, opacity: heroOpacity }}
-        className="mx-auto hidden max-w-6xl items-end gap-12 pt-20 md:grid md:grid-cols-[1.15fr_0.85fr] md:pt-28"
+        className="mx-auto hidden max-w-6xl items-end gap-12 pt-6 md:grid md:grid-cols-[1.15fr_0.85fr] md:pt-8"
       >
         <div className="space-y-5 sm:space-y-8">
           <motion.div
@@ -198,6 +213,26 @@ export function CinematicHero({
             {description}
           </motion.p>
 
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ...spring, delay: 0.72 }}
+            className="flex items-center gap-3"
+          >
+            <a
+              href="#projects"
+              className="rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background shadow-xl shadow-foreground/10 transition-opacity hover:opacity-80"
+            >
+              View work ↓
+            </a>
+            <a
+              href="mailto:vietducdtu@gmail.com"
+              className="rounded-full border border-foreground/15 bg-background/50 px-5 py-2.5 text-sm font-medium text-foreground/75 backdrop-blur-xl transition hover:border-foreground/30 hover:text-foreground"
+            >
+              Get in touch →
+            </a>
+          </motion.div>
+
         </div>
 
         <motion.button
@@ -221,13 +256,32 @@ export function CinematicHero({
           </Avatar>
           <div className="absolute bottom-3 left-3 right-3 rounded-2xl border border-white/20 bg-black/35 px-3 py-2 text-left text-white shadow-2xl backdrop-blur-md sm:bottom-5 sm:left-5 sm:right-5 sm:px-4 sm:py-3">
             <p className="text-[10px] uppercase tracking-[0.18em] text-white/65 sm:text-xs sm:tracking-[0.22em]">
-              Available for craft
+              Open to opportunities
             </p>
             <p className="mt-1 text-sm font-semibold sm:text-lg">
-              Frontend Developer
+              Fullstack Developer
             </p>
           </div>
         </motion.button>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.1, duration: 0.6 }}
+        className="absolute inset-x-0 bottom-0 overflow-hidden border-t border-foreground/8 py-3"
+      >
+        <div className="flex animate-marquee gap-10 whitespace-nowrap">
+          {[...ticker, ...ticker].map((item, i) => (
+            <span
+              key={i}
+              className="text-[10px] font-semibold uppercase tracking-[0.22em] text-foreground/35"
+            >
+              {item}
+              <span className="ml-10 opacity-40">·</span>
+            </span>
+          ))}
+        </div>
       </motion.div>
 
       <AnimatePresence>
