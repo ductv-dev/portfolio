@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/icon.svg",
+        url: "/favicon-v2.svg",
         type: "image/svg+xml",
       },
     ],
@@ -54,14 +54,6 @@ export const metadata: Metadata = {
     siteName: DATA.name,
     locale: "vi_VN",
     type: "website",
-    images: [
-      {
-        url: "/avatar-new.JPG", // Đảm bảo file này tồn tại trong folder public
-        width: 1200,
-        height: 630,
-        alt: DATA.name,
-      },
-    ],
   },
   robots: {
     index: true,
@@ -78,7 +70,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${DATA.name} | Fullstack Developer`,
     description: DATA.description,
-    images: ["/avatar-new.JPG"],
   },
   verification: {
     google: "r28wTyKNPxZoMi0Fdqh7JCV6neoucMobgInEyhlASMo",

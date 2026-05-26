@@ -18,7 +18,7 @@ export const DATA = {
   description:
     "Fullstack Developer. I love architecting scalable distributed systems and crafting high-performance, pixel-perfect web applications.",
   summary:
-    "Information Technology graduate with solid hands-on experience across the full development stack. Skilled in building modern web applications with [Next.js and NestJS](/#skills) and cross-platform mobile apps with React Native. Completed a fullstack internship where I applied microservice architecture, containerized services with [Docker](/#skills), leveraged [Redis](/#skills) for caching and [RabbitMQ](/#skills) for asynchronous event-driven communication, and designed scalable relational database schemas. I bring a proactive mindset, strong system-analysis thinking, and a keen eye for translating Figma designs into clean, maintainable code.",
+    "Information Technology graduate with solid hands-on experience across the full development stack. Skilled in building modern web applications with [Next.js and NestJS](/#skills) and cross-platform mobile apps with React Native. Completed a fullstack internship where I applied microservice architecture, containerized services with [Docker](/#skills), leveraged [Redis](/#skills) for caching and [RabbitMQ](/#skills) for asynchronous event-driven communication, and designed scalable relational database schemas. Holds a TOEIC score of 490. I bring a proactive mindset, strong system-analysis thinking, and a keen eye for translating Figma designs into clean, maintainable code.",
   avatarUrl: "/avatar-new.JPG",
   skills: [
     "TypeScript",
@@ -34,8 +34,10 @@ export const DATA = {
     "Prisma ORM",
     "Redis",
     "RabbitMQ",
+    "Socket.IO",
     "Docker",
     "System Design",
+    "TanStack Query",
     "Tailwind CSS",
     "Shadcn UI",
     "React Hook Form",
@@ -85,7 +87,7 @@ export const DATA = {
       title: "Fullstack Developer ",
       logoUrl: "/the-black-ants.png",
       start: "April 2026",
-      end: "May 2026",
+      end: "June 2026",
       description:
         "Completed a fullstack internship building production-grade applications with a microservice architecture. Gained hands-on experience containerizing and orchestrating services with Docker, using Redis for high-performance caching and session management, and RabbitMQ for asynchronous inter-service communication. Applied system analysis and database design principles to architect scalable, maintainable backend systems in a real-world team environment.",
     },
@@ -101,18 +103,6 @@ export const DATA = {
       description:
         "Collaborated under senior mentorship to build modern web and mobile applications. Developed responsive web interfaces using React, Tailwind CSS, and shadcn/ui, while managing server state with TanStack Query. Translated high-fidelity Figma designs into a React Native mobile app focusing on smooth UI/UX and optimized performance.",
     },
-    {
-      company: "Tmore 247",
-      href: "https://www.facebook.com/tmorecaurong/?locale=vi_VN",
-      badges: [],
-      location: "Da Nang, Viet Nam",
-      title: "Store Manager & Barista",
-      logoUrl: "/tmore.png", // Thêm ảnh logo vào thư mục public nếu có
-      start: "2023",
-      end: "2025",
-      description:
-        "Managed daily operations of a large-scale coffee shop, ensuring high-quality customer service. Developed strong interpersonal, communication, and problem-solving skills by handling scheduling and resolving on-site issues under fast-paced environments.",
-    },
   ],
   education: [
     {
@@ -127,11 +117,11 @@ export const DATA = {
   projects: [
     {
       title: "Uni Crypto - Token Trading Exchange",
-      href: "https://github.com/ductv-dev",
+      href: "https://github.com/ductv-dev/uni_crypto-monorepo",
       dates: "Apr 2026 - May 2026",
       active: true,
       description:
-        "Architected and developed a full-stack cryptocurrency token trading platform, replicating core features of a modern crypto exchange. Designed a microservice backend with NestJS where each domain (order management, user wallet, market data) runs as an independent service communicating via RabbitMQ message queues. Integrated Redis to power a high-throughput in-memory order book and real-time price ticker. Delivered live candlestick charts and order book updates to the Next.js frontend via WebSockets. All services are containerized with Docker Compose for consistent deployment across environments.",
+        "Architected an enterprise-grade, full-stack cryptocurrency trading platform using a strictly-typed Monorepo structure (pnpm workspaces + Turbo), sharing Zod validation schemas and TypeScript interfaces seamlessly across a Next.js client, Next.js admin dashboard, and NestJS backend. Engineered a distributed, event-driven matching engine per trading pair (BTC-USDT, ETH-USDT, BNB-USDT) with RabbitMQ message brokering, Outbox pattern for exactly-once order processing, and Redis pub/sub for real-time trade broadcasts via Socket.IO WebSocket gateway.",
       technologies: [
         "NestJS",
         "Microservices",
