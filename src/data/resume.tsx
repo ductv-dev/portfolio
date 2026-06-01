@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon } from "lucide-react";
+import { FolderKanban, HomeIcon } from "lucide-react";
 import type { ReactNode } from "react";
 
 type InfoItem = {
@@ -45,6 +45,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/projects", icon: FolderKanban, label: "Projects" },
     { href: "/infor", icon: Icons.user, label: "Info" },
   ],
   contact: {
