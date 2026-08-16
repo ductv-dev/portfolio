@@ -81,7 +81,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-[calc(0.75rem+env(safe-area-inset-bottom))] flex h-full max-h-14 origin-bottom px-2 sm:mb-7 sm:max-h-16 sm:px-4 print:hidden">
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-[calc(0.75rem+env(safe-area-inset-bottom))] flex h-full max-h-14 origin-bottom px-2 sm:mb-7 sm:max-h-16 sm:px-4 md:hidden print:hidden">
       <div className="fixed inset-x-0 bottom-0 h-20 w-full border-t border-white/10 bg-background/20 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.3)] backdrop-blur-xl [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background/40 dark:border-white/20" />
 
       <Dock

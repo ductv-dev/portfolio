@@ -91,12 +91,17 @@ const config = {
           "80%": { transform: "translate3d(6%, 4%, 0)" },
           "90%": { transform: "translate3d(-8%, 10%, 0)" },
         },
+        blink: {
+          "0%, 50%": { opacity: "1" },
+          "51%, 100%": { opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         grain: "grain 18s steps(10) infinite",
         marquee: "marquee 30s linear infinite",
+        blink: "blink 1s steps(1) infinite",
       },
     },
   },

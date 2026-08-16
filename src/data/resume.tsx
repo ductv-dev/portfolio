@@ -1,13 +1,5 @@
 import { Icons } from "@/components/icons";
 import { FolderKanban, HomeIcon } from "lucide-react";
-import type { ReactNode } from "react";
-
-type InfoItem = {
-  icon: ReactNode;
-  title: string;
-  value?: string;
-  href?: string;
-};
 
 export const DATA = {
   name: "Trần Viết Đức",
@@ -41,12 +33,13 @@ export const DATA = {
     "Tailwind CSS",
     "Shadcn UI",
     "React Hook Form",
+    "Vite",
+    "Swagger",
     "Git",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/projects", icon: FolderKanban, label: "Projects" },
-    { href: "/infor", icon: Icons.user, label: "Info" },
   ],
   contact: {
     email: "vietducdtu@gmail.com",
@@ -80,6 +73,18 @@ export const DATA = {
   },
 
   work: [
+    {
+      company: "Freelance",
+      href: undefined,
+      badges: ["Freelance"],
+      location: "Remote",
+      title: "Fullstack Developer",
+      logoUrl: "",
+      start: "June 2026",
+      end: undefined,
+      description:
+        "Working independently as a fullstack developer on a point-of-sale (POS) system for a Nepali client based in Japan. Building the backend API with NestJS and Prisma, documenting endpoints with Swagger, and developing the admin dashboard with React (Vite) and shadcn/ui.",
+    },
     {
       company: "The Black Ants ",
       href: "https://theblackants.com/",
@@ -275,28 +280,4 @@ export const DATA = {
     },
   ],
   hackathons: [],
-  infor: [
-    {
-      icon: <Icons.location className="size-4" />,
-      title: "Đà Nẵng, Việt Nam",
-    },
-    {
-      icon: <Icons.tiktok className="size-4" />,
-      title: "Kênh TikTok Đà Nẵng . Zip",
-      value: "@danangzip.site",
-      href: "https://www.tiktok.com/@danangzip.site",
-    },
-    {
-      icon: <Icons.universisy className="size-4" />,
-      title: "Duy Tân University",
-    },
-    {
-      icon: <Icons.heart className="size-4" />,
-      title: "Ngọc Anh",
-    },
-    {
-      icon: <Icons.home className="size-4" />,
-      title: "Quảng Trị, Việt Nam",
-    },
-  ] satisfies InfoItem[],
 } as const;

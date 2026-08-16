@@ -1,10 +1,12 @@
+import { IntroScreen } from "@/components/intro-screen";
 import Navbar from "@/components/navbar";
+import { SidebarNav } from "@/components/notion/sidebar-nav";
 import { SmoothScrollProvider } from "@/components/smooth-scroll-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Space_Grotesk as FontSans } from "next/font/google";
+import { Inter as FontSans } from "next/font/google";
 
 import { LinkifyProvider } from "@/provider/linkify";
 import "./globals.css";
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
     default: `${DATA.name} | Fullstack Developer`,
     template: `%s | ${DATA.name}`,
   },
-  description: `Portfolio của ${DATA.name} - Fullstack Developer chuyên về Next.js, NestJS, microservices, Docker và React Native tại Đà Nẵng. ${DATA.description}`,
+  description: `Portfolio of ${DATA.name} - a Fullstack Developer specializing in Next.js, NestJS, microservices, Docker, and React Native, based in Da Nang. ${DATA.description}`,
   keywords: [
     DATA.name,
     "Trần Viết Đức",
@@ -49,10 +51,10 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: `${DATA.name} | Fullstack Developer`,
-    description: `Portfolio của ${DATA.name} - Fullstack Developer chuyên về Next.js, NestJS, microservices và Docker tại Đà Nẵng.`,
+    description: `Portfolio of ${DATA.name} - a Fullstack Developer specializing in Next.js, NestJS, microservices, and Docker, based in Da Nang.`,
     url: "/",
     siteName: DATA.name,
-    locale: "vi_VN",
+    locale: "en_US",
     type: "website",
   },
   robots: {
@@ -107,7 +109,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="vi" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -123,7 +125,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light">
           <LinkifyProvider>
             <SmoothScrollProvider>
-              {children}
+              <IntroScreen />
+              <SidebarNav />
+              <div className="md:pl-[var(--sidebar-w,16rem)]">{children}</div>
               <Navbar />
             </SmoothScrollProvider>
           </LinkifyProvider>
