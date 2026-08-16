@@ -3,10 +3,14 @@
 import { useTypewriter } from "@/hooks/use-typewriter";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 const SEEN_KEY = "intro-seen";
 const WELCOME = "Welcome.";
+
+// useLayoutEffect warns during SSR since it has no effect there; fall back to
+// useEffect on the server so the warning doesn't spam the console.
+const useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 // Exact path data from lucide-react's CodeXml ("Code2") icon — drawn in manually
 // so each stroke can be animated individually via Framer Motion's `pathLength`.
@@ -25,11 +29,16 @@ const FILL_DELAY = LAST_DRAW_END - 0.15;
 const TEXT_START_DELAY = LAST_DRAW_END + 0.25;
 
 export function IntroScreen() {
-  const [visible, setVisible] = useState<boolean | null>(null);
+  // Default to visible (matches SSR output) so there's no flash of the
+  // homepage underneath; useIsomorphicLayoutEffect hides it *before paint*
+  // on repeat visits within the same session, so that flip is invisible too.
+  const [visible, setVisible] = useState(true);
   const { typed, started } = useTypewriter(WELCOME, 90, TEXT_START_DELAY * 1000);
 
-  useEffect(() => {
-    setVisible(!sessionStorage.getItem(SEEN_KEY));
+  useIsomorphicLayoutEffect(() => {
+    if (sessionStorage.getItem(SEEN_KEY)) {
+      setVisible(false);
+    }
   }, []);
 
   const dismiss = () => {
