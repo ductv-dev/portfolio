@@ -1,14 +1,13 @@
-import { IntroScreen } from "@/components/intro-screen";
 import Navbar from "@/components/navbar";
-import { SidebarNav } from "@/components/notion/sidebar-nav";
+import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { SmoothScrollProvider } from "@/components/smooth-scroll-provider";
 import { ThemeProvider } from "@/components/theme-provider";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 
-import { LinkifyProvider } from "@/provider/linkify";
 import "./globals.css";
 
 const fontSans = FontSans({
@@ -104,11 +103,7 @@ export default function RootLayout({
       addressLocality: "Da Nang",
       addressCountry: "VN",
     },
-    sameAs: [
-      DATA.contact.social.GitHub.url,
-      DATA.contact.social.Facebook.url,
-      DATA.contact.social.Instagram.url,
-    ],
+    sameAs: [DATA.contact.social.GitHub.url],
     description: DATA.description,
   };
 
@@ -122,19 +117,30 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "min-h-screen overflow-x-clip bg-background font-sans antialiased",
+          "relative min-h-screen overflow-x-clip bg-background font-sans antialiased",
           fontSans.variable,
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
-          <LinkifyProvider>
+          <TooltipProvider delayDuration={0}>
             <SmoothScrollProvider>
-              <IntroScreen />
-              <SidebarNav />
-              <div className="md:pl-[var(--sidebar-w,16rem)]">{children}</div>
+              <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">
+                <FlickeringGrid
+                  className="h-full w-full"
+                  squareSize={2}
+                  gridGap={2}
+                  style={{
+                    maskImage: "linear-gradient(to bottom, black, transparent)",
+                    WebkitMaskImage: "linear-gradient(to bottom, black, transparent)",
+                  }}
+                />
+              </div>
+              <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
+                {children}
+              </div>
               <Navbar />
             </SmoothScrollProvider>
-          </LinkifyProvider>
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>

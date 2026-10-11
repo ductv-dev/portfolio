@@ -1,12 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  async redirects() {
+    return [{ source: "/projects", destination: "/#projects", permanent: false }];
+  },
   images: {
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "www.facebook.com",
-      },
       {
         protocol: "https",
         hostname: "avatars.githubusercontent.com",

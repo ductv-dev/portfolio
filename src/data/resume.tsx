@@ -1,49 +1,61 @@
 import { Icons } from "@/components/icons";
-import { FolderKanban, HomeIcon } from "lucide-react";
+import { Docker } from "@/components/ui/svgs/docker";
+import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
+import { Nodejs } from "@/components/ui/svgs/nodejs";
+import { Postgresql } from "@/components/ui/svgs/postgresql";
+import { ReactLight } from "@/components/ui/svgs/reactLight";
+import { Typescript } from "@/components/ui/svgs/typescript";
+import { HomeIcon } from "lucide-react";
 
 export const DATA = {
   name: "Trần Viết Đức",
-  initials: "DUCTV",
+  initials: "TVĐ",
   url: "https://ductv.dev",
-  location: "168 Nguyen Van Linh, Da Nang, Viet Nam",
-  locationLink: "https://www.google.com/maps/place/Da+Nang,+Viet+Nam",
   description:
     "Fullstack Developer. I love architecting scalable distributed systems and crafting high-performance, pixel-perfect web applications.",
   summary:
-    "Information Technology graduate with solid hands-on experience across the full development stack. Skilled in building modern web applications with [Next.js and NestJS](/#skills) and cross-platform mobile apps with React Native. Completed a fullstack internship where I applied microservice architecture, containerized services with [Docker](/#skills), leveraged [Redis](/#skills) for caching and [RabbitMQ](/#skills) for asynchronous event-driven communication, and designed scalable relational database schemas. Holds a TOEIC score of 490. I bring a proactive mindset, strong system-analysis thinking, and a keen eye for translating Figma designs into clean, maintainable code.",
+    "IT graduate from Duy Tan University. I build web apps with Next.js and NestJS and mobile apps with React Native, with hands-on experience in microservices, Docker, Redis and RabbitMQ. I care about clear system design and turning Figma designs into clean, maintainable code.",
   avatarUrl: "/avatar-new.JPG",
   skills: [
-    "TypeScript",
-    "JavaScript (ES6+)",
-    "React.js",
-    "Next.js",
-    "React Native",
-    "NestJS",
-    "Node.js",
-    "Microservices",
-    "PostgreSQL",
-    "MySQL",
-    "Prisma ORM",
-    "Redis",
-    "RabbitMQ",
-    "Socket.IO",
-    "Docker",
-    "System Design",
-    "TanStack Query",
-    "Tailwind CSS",
-    "Shadcn UI",
-    "React Hook Form",
-    "Vite",
-    "Swagger",
-    "Git",
+    {
+      group: "Frontend",
+      items: [
+        { name: "TypeScript", icon: Typescript },
+        { name: "React.js", icon: ReactLight },
+        { name: "Next.js", icon: NextjsIconDark },
+        { name: "React Native", icon: ReactLight },
+        { name: "TanStack Query" },
+        { name: "Tailwind CSS" },
+        { name: "Shadcn UI" },
+      ],
+    },
+    {
+      group: "Backend",
+      items: [
+        { name: "NestJS" },
+        { name: "Node.js", icon: Nodejs },
+        { name: "PostgreSQL", icon: Postgresql },
+        { name: "MySQL" },
+        { name: "Prisma ORM" },
+        { name: "Redis" },
+        { name: "RabbitMQ" },
+        { name: "Socket.IO" },
+      ],
+    },
+    {
+      group: "Infra & Architecture",
+      items: [
+        { name: "Docker", icon: Docker },
+        { name: "Microservices" },
+        { name: "System Design" },
+      ],
+    },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/projects", icon: FolderKanban, label: "Projects" },
   ],
   contact: {
-    email: "vietducdtu@gmail.com",
-    tel: "0866791931",
+    email: "ductvdev@gmail.com",
     social: {
       GitHub: {
         name: "GitHub",
@@ -51,21 +63,9 @@ export const DATA = {
         icon: Icons.github,
         navbar: true,
       },
-      Facebook: {
-        name: "Facebook",
-        url: "https://www.facebook.com/ductv.devl",
-        icon: Icons.facebook,
-        navbar: true,
-      },
-      Instagram: {
-        name: "Instagram",
-        url: "https://www.instagram.com/maprill.29/",
-        icon: Icons.instagram,
-        navbar: false,
-      },
       Email: {
         name: "Send Email",
-        url: "mailto:vietducdtu@gmail.com?subject=Hello%20from%20Portfolio",
+        url: "mailto:ductvdev@gmail.com?subject=Hello%20from%20Portfolio",
         icon: Icons.email,
         navbar: true,
       },
@@ -82,20 +82,25 @@ export const DATA = {
       logoUrl: "",
       start: "June 2026",
       end: undefined,
-      description:
-        "Working independently as a fullstack developer on a point-of-sale (POS) system for a Nepali client based in Japan. Building the backend API with NestJS and Prisma, documenting endpoints with Swagger, and developing the admin dashboard with React (Vite) and shadcn/ui.",
+      highlights: [
+        "Building a point-of-sale (POS) system for a Nepali client based in Japan.",
+        "Backend API with NestJS and Prisma, documented with Swagger.",
+        "Admin dashboard with React (Vite) and shadcn/ui.",
+      ],
     },
     {
-      company: "The Black Ants ",
+      company: "The Black Ants",
       href: "https://theblackants.com/",
       badges: [],
-      location: "Da Nang, Viet Nam ",
-      title: "Fullstack Developer ",
+          title: "Fullstack Developer",
       logoUrl: "/the-black-ants.png",
       start: "April 2026",
       end: "June 2026",
-      description:
-        "Completed a fullstack internship building production-grade applications with a microservice architecture. Gained hands-on experience containerizing and orchestrating services with Docker, using Redis for high-performance caching and session management, and RabbitMQ for asynchronous inter-service communication. Applied system analysis and database design principles to architect scalable, maintainable backend systems in a real-world team environment.",
+      highlights: [
+        "Built production applications on a microservice architecture during a fullstack internship.",
+        "Containerized services with Docker; used Redis for caching and session management and RabbitMQ for asynchronous inter-service communication.",
+        "Designed database schemas for scalable, maintainable backend systems.",
+      ],
     },
     {
       company: "Weebuild Viet Nam",
@@ -106,8 +111,10 @@ export const DATA = {
       logoUrl: "/weebuild.svg",
       start: "Aug 2025",
       end: "Dec 2025",
-      description:
-        "Collaborated under senior mentorship to build modern web and mobile applications. Developed responsive web interfaces using React, Tailwind CSS, and shadcn/ui, while managing server state with TanStack Query. Translated high-fidelity Figma designs into a React Native mobile app focusing on smooth UI/UX and optimized performance.",
+      highlights: [
+        "Built responsive web interfaces with React, Tailwind CSS and shadcn/ui, managing server state with TanStack Query.",
+        "Translated Figma designs into a React Native mobile app, with a focus on smooth UI and performance.",
+      ],
     },
   ],
   education: [
@@ -127,7 +134,7 @@ export const DATA = {
       dates: "Apr 2026 - May 2026",
       active: true,
       description:
-        "Architected an enterprise-grade, full-stack cryptocurrency trading platform using a strictly-typed Monorepo structure (pnpm workspaces + Turbo), sharing Zod validation schemas and TypeScript interfaces seamlessly across a Next.js client, Next.js admin dashboard, and NestJS backend. Engineered a distributed, event-driven matching engine per trading pair (BTC-USDT, ETH-USDT, BNB-USDT) with RabbitMQ message brokering, Outbox pattern for exactly-once order processing, and Redis pub/sub for real-time trade broadcasts via Socket.IO WebSocket gateway.",
+        "A full-stack cryptocurrency trading platform: Next.js client, Next.js admin dashboard and NestJS backend in one pnpm + Turbo monorepo with shared Zod schemas. An event-driven matching engine per trading pair uses RabbitMQ and the Outbox pattern for order processing, with Redis pub/sub and Socket.IO for real-time trade updates.",
       technologies: [
         "NestJS",
         "Microservices",
@@ -156,7 +163,7 @@ export const DATA = {
       dates: "Dec 2025 - Present",
       active: true,
       description:
-        "Architected a Todoist-inspired, full-stack application utilizing a strictly typed Monorepo structure. Seamlessly shared Zod validation schemas and TypeScript interfaces between the Next.js frontend and NestJS backend. Built secure RESTful APIs with advanced JWT HTTP-only cookies and managed UI states smoothly using Zustand.",
+        "A Todoist-inspired productivity app in a strictly typed monorepo, sharing Zod schemas and TypeScript types between the Next.js frontend and NestJS backend. REST APIs are secured with JWT in HTTP-only cookies, and UI state is managed with Zustand.",
       technologies: [
         "Monorepo",
         "TypeScript",
@@ -184,7 +191,7 @@ export const DATA = {
       dates: "Mar 2026 - Present",
       active: true,
       description:
-        "Designed and developed a modern, responsive personal portfolio template using Next.js and Tailwind CSS. The website features a clean UI/UX design, optimized performance, and is fully customizable for developers to showcase their projects and skills effectively.",
+        "A responsive, customizable personal portfolio template built with Next.js and Tailwind CSS, focused on clean UI and performance.",
       technologies: [
         "TypeScript",
         "Next.js",
@@ -210,7 +217,7 @@ export const DATA = {
       dates: "Nov 2025 - Present",
       active: true,
       description:
-        "Developed a frontend-focused mobile application using Expo and React Native. Translated high-fidelity Figma designs into a pixel-perfect user interface for both iOS and Android. Utilized Jotai for atomic state management and mock JSON files to simulate API responses, ensuring smooth data flow and seamless user interactions.",
+        "A cross-platform mobile app built with Expo and React Native, turning Figma designs into a pixel-perfect UI for iOS and Android. Uses Jotai for state management and mock JSON data in place of an API.",
       technologies: [
         "React Native",
         "Expo",
@@ -231,11 +238,11 @@ export const DATA = {
     },
     {
       title: "Homestay Booking Management System",
-      href: "https://github.com/ductv-dev",
+      href: undefined,
       dates: "2024 - 2025",
       active: true,
       description:
-        "Led a 5-member Agile team as Scrum Master. Developed a full-stack platform for homestay owners to manage bookings and customers to pay online. Integrated VietQR for automated payments and deployed a Gemini AI chatbot to support real-time customer interaction.",
+        "A full-stack platform for homestay owners to manage bookings and for customers to pay online, with VietQR automated payments and a Gemini AI chatbot. Led the 5-member Agile team as Scrum Master.",
       technologies: [
         "Vue.js",
         "Laravel",
@@ -244,13 +251,7 @@ export const DATA = {
         "Gemini AI",
         "Scrum/Agile",
       ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/ductv-dev",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
+      links: [],
       image: "/homes.png",
       video: "",
     },
@@ -260,7 +261,7 @@ export const DATA = {
       dates: "Oct 2025 - Nov 2025",
       active: true,
       description:
-        "Developed a personalized digital wedding experience replacing traditional paper invitations. The platform dynamically maps guest names from a JSON dataset and is enhanced with smooth entrance animations via Framer Motion and an integrated background audio player.",
+        "A personalized digital wedding invitation that maps guest names from a JSON dataset, with Framer Motion entrance animations and a background audio player.",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       links: [
         {
@@ -279,5 +280,4 @@ export const DATA = {
         "https://res.cloudinary.com/diu7vuhpk/video/upload/v1767468386/demo-iv_uydubr.mov",
     },
   ],
-  hackathons: [],
 } as const;
