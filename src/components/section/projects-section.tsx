@@ -14,8 +14,8 @@ export default function ProjectsSection() {
                             className="flex-1 h-px bg-gradient-to-r from-transparent from-5% via-border via-95% to-transparent"
 
                         />
-                        <div className="border bg-primary z-10 rounded-xl px-4 py-1">
-                            <span className="text-background text-sm font-medium">My Projects</span>
+                        <div className="border bg-primary z-10 px-4 py-1">
+                            <span className="text-primary-foreground text-xs font-mono font-medium uppercase tracking-widest">My Projects</span>
                         </div>
                         <div
                             className="flex-1 h-px bg-gradient-to-l from-transparent from-5% via-border via-95% to-transparent"

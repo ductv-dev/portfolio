@@ -21,6 +21,7 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        mono: ["var(--font-mono)", ...fontFamily.mono],
       },
       colors: {
         border: "hsl(var(--border) / <alpha-value>)",
@@ -61,6 +62,10 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        brutal: "4px 4px 0 0 hsl(var(--primary))",
+        "brutal-sm": "2px 2px 0 0 hsl(var(--primary))",
       },
       backgroundImage: {
         grain:

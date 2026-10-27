@@ -86,7 +86,7 @@ export function ProjectCard({
   return (
     <div
       className={cn(
-        "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 hover:ring-muted transition-all duration-200",
+        "flex flex-col h-full border border-border bg-card overflow-hidden transition-all duration-200 hover:border-primary hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal",
         className
       )}
     >
@@ -114,7 +114,7 @@ export function ProjectCard({
                 onClick={(e) => e.stopPropagation()}
               >
                 <Badge
-                  className="flex items-center gap-1.5 text-xs bg-black text-white hover:bg-black/90"
+                  className="flex items-center gap-1.5 text-xs font-mono border-foreground bg-primary text-primary-foreground hover:bg-primary/90"
                   variant="default"
                 >
                   {link.icon}
@@ -136,7 +136,7 @@ export function ProjectCard({
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+              className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               aria-label={`Open ${title}`}
             >
               <ArrowUpRight className="h-4 w-4" aria-hidden />
@@ -151,7 +151,7 @@ export function ProjectCard({
             {tags.map((tag) => (
               <Badge
                 key={tag}
-                className="text-[11px] font-medium border border-border h-6 w-fit px-2"
+                className="text-[11px] font-mono font-medium border border-border h-6 w-fit px-2"
                 variant="outline"
               >
                 {tag}

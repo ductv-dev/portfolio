@@ -11,11 +11,50 @@ export const DATA = {
   name: "Trần Viết Đức",
   initials: "TVĐ",
   url: "https://ductv.dev",
+  hook: "Hire me. I build great products with Claude.",
   description:
-    "Fullstack Developer. I love architecting scalable distributed systems and crafting high-performance, pixel-perfect web applications.",
+    "AI-native Fullstack Developer. I pair my engineering fundamentals with Claude to ship scalable systems and pixel-perfect apps — faster, without cutting corners.",
   summary:
     "IT graduate from Duy Tan University. I build web apps with Next.js and NestJS and mobile apps with React Native, with hands-on experience in microservices, Docker, Redis and RabbitMQ. I care about clear system design and turning Figma designs into clean, maintainable code.",
   avatarUrl: "/avatar-new.JPG",
+  ai: {
+    intro:
+      "AI doesn't replace engineering judgment — it multiplies it. I use Claude as a pair-programming teammate across the whole lifecycle, while I stay accountable for the architecture and every line that ships.",
+    workflow: [
+      {
+        step: "01",
+        title: "Plan before code",
+        description:
+          "Explore unfamiliar codebases with Claude Code, draft implementation plans and weigh trade-offs before writing a single line.",
+      },
+      {
+        step: "02",
+        title: "Ship faster",
+        description:
+          "Delegate scaffolding, boilerplate, migrations and refactors so my time goes into system design and product decisions.",
+      },
+      {
+        step: "03",
+        title: "Review & test",
+        description:
+          "AI-assisted code review, edge-case hunting and test generation before every PR — then I verify everything myself.",
+      },
+      {
+        step: "04",
+        title: "Document & learn",
+        description:
+          "Ramp up on new libraries in hours, not days, and keep READMEs, API docs and PR descriptions clear for the whole team.",
+      },
+    ],
+    tools: [
+      "Claude Code",
+      "Claude API",
+      "MCP",
+      "Prompt Engineering",
+      "Agentic Workflows",
+      "Gemini API",
+    ],
+  },
   skills: [
     {
       group: "Frontend",

@@ -16,7 +16,7 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
 
   if (!src || imageError) {
     return (
-      <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none flex items-center justify-center text-xs md:text-sm font-semibold text-muted-foreground">
+      <div className="size-8 md:size-10 p-1 border shadow ring-2 ring-border bg-muted flex-none flex items-center justify-center text-xs md:text-sm font-semibold text-muted-foreground">
         {alt.trim().charAt(0).toUpperCase()}
       </div>
     );
@@ -26,7 +26,7 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
     <img
       src={src}
       alt={alt}
-      className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none"
+      className="size-8 md:size-10 p-1 border shadow ring-2 ring-border overflow-hidden object-contain flex-none"
       onError={() => setImageError(true)}
     />
   );
@@ -36,7 +36,6 @@ export default function WorkSection() {
   return (
     <Accordion
       type="multiple"
-      defaultValue={DATA.work.map((work) => work.company)}
       className="w-full grid gap-6"
     >
       {DATA.work.map((work) => (
@@ -45,7 +44,7 @@ export default function WorkSection() {
           value={work.company}
           className="w-full border-b-0 grid gap-2"
         >
-          <AccordionTrigger className="hover:no-underline p-0 cursor-pointer transition-colors rounded-none group [&>svg]:hidden">
+          <AccordionTrigger className="hover:no-underline p-0 cursor-pointer transition-colors group [&>svg]:hidden">
             <div className="flex items-center gap-x-3 justify-between w-full text-left">
               <div className="flex items-center gap-x-3 flex-1 min-w-0">
                 <LogoImage src={work.logoUrl} alt={work.company} />

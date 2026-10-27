@@ -6,13 +6,18 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Inter as FontSans, JetBrains_Mono as FontMono } from "next/font/google";
 
 import "./globals.css";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const fontMono = FontMono({
+  subsets: ["latin"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -37,7 +42,7 @@ export const metadata: Metadata = {
     ],
   },
   title: {
-    default: `${DATA.name} | Fullstack Developer`,
+    default: `${DATA.name} | AI-Native Fullstack Developer`,
     template: `%s | ${DATA.name}`,
   },
   description: `Portfolio of ${DATA.name} - a Fullstack Developer specializing in Next.js, NestJS, microservices, Docker, and React Native, based in Da Nang. ${DATA.description}`,
@@ -51,6 +56,8 @@ export const metadata: Metadata = {
     "React Developer Vietnam",
     "Software Engineer Portfolio",
     "Microservices Developer",
+    "AI-Native Developer",
+    "Claude Code Developer",
   ],
   openGraph: {
     title: `${DATA.name} | Fullstack Developer`,
@@ -119,6 +126,7 @@ export default function RootLayout({
         className={cn(
           "relative min-h-screen overflow-x-clip bg-background font-sans antialiased",
           fontSans.variable,
+          fontMono.variable,
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
@@ -127,6 +135,7 @@ export default function RootLayout({
               <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">
                 <FlickeringGrid
                   className="h-full w-full"
+                  color="hsl(var(--primary))"
                   squareSize={2}
                   gridGap={2}
                   style={{
