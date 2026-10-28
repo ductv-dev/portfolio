@@ -140,7 +140,7 @@ export default function OGImage() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://ductv.dev/avatar-new.JPG"
+            src="https://ductv.dev/avatar.jpg"
             alt="Trần Viết Đức"
             style={{
               width: "100%",

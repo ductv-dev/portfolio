@@ -16,7 +16,7 @@ export const DATA = {
     "AI-native Fullstack Developer. I pair my engineering fundamentals with Claude to ship scalable systems and pixel-perfect apps — faster, without cutting corners.",
   summary:
     "IT graduate from Duy Tan University. I build web apps with Next.js and NestJS and mobile apps with React Native, with hands-on experience in microservices, Docker, Redis and RabbitMQ. I care about clear system design and turning Figma designs into clean, maintainable code.",
-  avatarUrl: "/avatar-new.JPG",
+  avatarUrl: "/avatar.jpg",
   ai: {
     intro:
       "AI doesn't replace engineering judgment — it multiplies it. I use Claude as a pair-programming teammate across the whole lifecycle, while I stay accountable for the architecture and every line that ships.",

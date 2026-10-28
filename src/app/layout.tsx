@@ -29,26 +29,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  icons: {
-    icon: [
-      { url: "/favicon/favicon.ico", sizes: "any" },
-      { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
-      { url: "/favicon/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
-    ],
-    apple: [
-      { url: "/favicon/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-  },
   title: {
     default: `${DATA.name} | AI-Native Fullstack Developer`,
     template: `%s | ${DATA.name}`,
   },
-  description: `Portfolio of ${DATA.name} - a Fullstack Developer specializing in Next.js, NestJS, microservices, Docker, and React Native, based in Da Nang. ${DATA.description}`,
+  description: `${DATA.name} – Fullstack Developer in Da Nang building web and mobile apps with Next.js, NestJS and React Native.`,
   keywords: [
     DATA.name,
-    "Trần Viết Đức",
     "Tran Viet Duc",
     "ductv.dev",
     "Fullstack Developer Da Nang",
@@ -101,10 +88,6 @@ export default function RootLayout({
     url: DATA.url,
     image: `${DATA.url}${DATA.avatarUrl}`,
     jobTitle: "Fullstack Developer",
-    worksFor: {
-      "@type": "Organization",
-      name: "The Black Ants",
-    },
     address: {
       "@type": "PostalAddress",
       addressLocality: "Da Nang",
