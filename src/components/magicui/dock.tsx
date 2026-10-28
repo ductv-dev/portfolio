@@ -37,8 +37,9 @@ const Dock = ({ className, children, magnification = DEFAULT_MAGNIFICATION, dist
   return (
     <DockContext.Provider value={{ mouseX, magnification, distance }}>
       <motion.div
-        onMouseMove={(e) => mouseX.set(e.pageX)}
-        onMouseLeave={() => mouseX.set(Infinity)}
+        // Touch devices emit a synthetic move on tap but never a leave, which leaves icons stuck magnified
+        onPointerMove={(e) => e.pointerType === "mouse" && mouseX.set(e.clientX)}
+        onPointerLeave={() => mouseX.set(Infinity)}
         className={cn("mx-auto w-max h-full flex items-end justify-center overflow-visible border", className)}
       >
         {children}
@@ -75,6 +76,7 @@ const DockIcon = ({ className, children }: DockIconProps) => {
     <motion.div
       ref={ref}
       style={{ width: containerSize, height: containerSize }}
+      whileTap={{ scale: 0.9 }}
       className={cn("relative flex aspect-square items-center justify-center shrink-0", className)}
     >
       <motion.div
