@@ -38,6 +38,7 @@ function ProjectMedia({
     return (
       <video
         src={video}
+        poster={image || undefined}
         autoPlay
         loop
         muted

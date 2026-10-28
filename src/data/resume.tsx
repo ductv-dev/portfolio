@@ -168,6 +168,36 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "NamiPOS - Restaurant Point-of-Sale System",
+      href: undefined,
+      dates: "Jun 2026 - Present",
+      active: true,
+      description:
+        "A production POS system for a client in Japan, built by a 3-person team (team lead, designer and me as developer) in a Turborepo monorepo. I develop features across the NestJS + Prisma API and the React (Vite) apps for the manager dashboard, cashier register, handheld ordering and customer QR ordering: menus, tables, reservations, coupons and sales reports, with Socket.IO real-time updates, i18n and an OpenAPI-generated shared client.",
+      technologies: [
+        "NestJS",
+        "Prisma",
+        "PostgreSQL",
+        "React",
+        "TanStack Router",
+        "TanStack Query",
+        "Zustand",
+        "Socket.IO",
+        "Swagger",
+        "Turborepo",
+      ],
+      links: [
+        {
+          type: "Demo Video",
+          href: "https://res.cloudinary.com/diu7vuhpk/video/upload/v1793159110/nami_tkzinx.mp4",
+          icon: <Icons.youtube className="size-3" />,
+        },
+      ],
+      image: "/nami-pos.png",
+      video:
+        "https://res.cloudinary.com/diu7vuhpk/video/upload/v1793159110/nami_tkzinx.mp4",
+    },
+    {
       title: "Uni Crypto - Token Trading Exchange",
       href: "https://github.com/ductv-dev/uni_crypto-monorepo",
       dates: "Apr 2026 - May 2026",
@@ -197,60 +227,6 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Taskflow - Monorepo Productivity Platform",
-      href: "https://github.com/ductv-dev/task-flow",
-      dates: "Dec 2025 - Present",
-      active: true,
-      description:
-        "A Todoist-inspired productivity app in a strictly typed monorepo, sharing Zod schemas and TypeScript types between the Next.js frontend and NestJS backend. REST APIs are secured with JWT in HTTP-only cookies, and UI state is managed with Zustand.",
-      technologies: [
-        "Monorepo",
-        "TypeScript",
-        "Next.js",
-        "NestJS",
-        "PostgreSQL",
-        "Prisma",
-        "Zustand",
-        "Zod",
-        "Tailwind CSS",
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/ductv-dev/task-flow",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/demo-taskflow.png",
-      video: "",
-    },
-    {
-      title: "Website Spa - Personal Portfolio Template",
-      href: "https://leospa-website.vercel.app/",
-      dates: "Mar 2026 - Present",
-      active: true,
-      description:
-        "A responsive, customizable personal portfolio template built with Next.js and Tailwind CSS, focused on clean UI and performance.",
-      technologies: [
-        "TypeScript",
-        "Next.js",
-        "Tailwind CSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Vercel",
-        "Motion Frames",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://leospa-website.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "/leospa.png",
-      video: "",
-    },
-    {
       title: "TunerVN - Cross-Platform Mobile App",
       href: "https://res.cloudinary.com/diu7vuhpk/video/upload/v1767470222/ScreenRecording_02-27-2026_17-18-44_1_ano2b3.mp4",
       dates: "Nov 2025 - Present",
@@ -273,25 +249,6 @@ export const DATA = {
         },
       ],
       image: "/chord.jpg",
-      video: "",
-    },
-    {
-      title: "Homestay Booking Management System",
-      href: undefined,
-      dates: "2024 - 2025",
-      active: true,
-      description:
-        "A full-stack platform for homestay owners to manage bookings and for customers to pay online, with VietQR automated payments and a Gemini AI chatbot. Led the 5-member Agile team as Scrum Master.",
-      technologies: [
-        "Vue.js",
-        "Laravel",
-        "MySQL",
-        "VietQR API",
-        "Gemini AI",
-        "Scrum/Agile",
-      ],
-      links: [],
-      image: "/homes.png",
       video: "",
     },
     {
